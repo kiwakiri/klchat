@@ -19,4 +19,4 @@ sock.bind((ip, port))
 while True:
     data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
     temp = data.decode()
-    print("received message: ", data, "\nfrom: ", addr)
+    print('Received message: ' + data + '\n' + 'From: ' + addr[0])
