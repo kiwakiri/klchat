@@ -1,9 +1,14 @@
 __author__ = 'Kip'
 import socket
 
-ip = '127.0.0.1'
+ip = '192.168.1.109'
 port = 65532
-
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.sendto("Hey Kip", (ip, port))
+while 1:
+    message = input("What do you want to type? ")
+    if message == 'n':
+        s.close()
+        exit()
+    else:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.sendto(message, (ip, port))
 s.close()
